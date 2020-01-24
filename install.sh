@@ -1,10 +1,11 @@
 #!/bin/bash
 set -xeu
-# IFS=$'\n\t'
+IFS=$'\n\t'
 
 # install Linuxbrew, paste at a terminal prompt:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
+export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 brew update
 brew install zsh
 brew install git vim jq tig fzf colorls
