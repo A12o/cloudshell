@@ -1,5 +1,5 @@
 #!/bin/bash
-set -xeuo pipefail
+set -xeu
 IFS=$'\n\t'
 
 # install Linuxbrew, paste at a terminal prompt:
