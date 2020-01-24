@@ -1,0 +1,76 @@
+# C extensions
+**/*.so
+
+# Packages
+**/*.egg
+**/*.egg-info
+dist
+build
+eggs
+parts
+sdist
+develop-eggs
+**/.installed.cfg
+**/__pycache__
+/Dotfiles/ptpython/history
+**/*.py[cod]
+
+# Installer logs
+**/*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+**/*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# vagrant
+/assets
+**/.vagrant
+/vagrant_ansible_inventory_*
+/vbox
+
+# vim
+/Dotfiles/.vim
+**/*.swp
+**/*.swo
+
+# local machine(s)
+**/.idea
+**/.DS_Store
+/.dropbox.cache/*
+**/.dropbox
+Icon$'\r'
+Icon*
+/vscode-xps/User/workspaceStorage/*
+/vscode-xps/User/globalStorage/*
+/vscode-xps/User/syncLocalSettings.json
+/vscode/User/syncLocalSettings.json
+/vscode/User/workspaceStorage/*
+/vscode/User/globalStorage/*
+
+/SQLcode/User/syncLocalSettings.json
+/SQLcode/User/workspaceStorage/*
+/SQLcode/User/globalStorage/*
+
+# Ansible
+**/*.retry
+
+# Terraform
+**/.terraform
+
+# ZSH
+**/.zsh_history
+
+# Trading
+trading/strategy
+trading/profiles
+

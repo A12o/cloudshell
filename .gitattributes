@@ -1,0 +1,17 @@
+## Refer to https://help.github.com/articles/dealing-with-line-endings/?#platform-all
+
+* text=auto
+
+*.yml text
+*.yaml text
+*.md text
+*.j2 text
+*.cfg text
+
+*.sh text
+*.py text
+
+*.rpm binary
+*.jar binary
+*.png binary
+*.jpg binary
