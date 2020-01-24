@@ -1,0 +1,21 @@
+---
+# ~/.tmuxinator/demo.yml
+
+name: demo
+root: ~/
+startup_pane: 0
+startup_window: mosh
+tmux_options: -f ~/.tmux.conf
+
+windows:
+  - mosh:
+      layout: main-horizontal
+      panes:
+        -
+        # - mosh al@10.250.210.86 || mosh al@192.168.191.109
+        # - mosh al@10.250.210.86 || mosh al@192.168.191.109
+        # - mosh al@10.250.210.86 || mosh al@192.168.191.109
+  # - GIT:
+  #     layout: tiled
+  #     panes:
+  #       - cd /Users/al/Arnold/work/GIT/Signet/al-ansible

@@ -1,0 +1,24 @@
+---
+# ~/.tmuxinator/asterisk.yml
+
+name: switches
+root: ~/
+
+windows:
+  - Asterisk_Prod_Switch:
+      layout: tiled
+      panes:
+        - ssh al@switch3.mongoosemetrics.com
+        - ssh al@switch4.mongoosemetrics.com
+        - ssh al@switch8.mongoosemetrics.com
+        - ssh al@switch9.mongoosemetrics.com
+        - ssh al@switch10.mongoosemetrics.com
+        - ssh al@switch11.mongoosemetrics.com
+        - ssh al@switch13.mongoosemetrics.com
+        - ssh al@switch14.mongoosemetrics.com
+        - ssh al@switch25.mongoosemetrics.com
+        - ssh al@switch26.mongoosemetrics.com
+        - ssh al@switch27.mongoosemetrics.com
+        - ssh al@switch28.mongoosemetrics.com
+        - ssh al@switch29.mongoosemetrics.com
+        - ssh al@switch30.mongoosemetrics.com

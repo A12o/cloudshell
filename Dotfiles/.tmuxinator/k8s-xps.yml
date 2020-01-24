@@ -1,0 +1,24 @@
+---
+# tmux list-windows
+
+name: k8s
+root: ~/
+startup_pane: -1
+startup_window: Dashboard
+tmux_options: -f ~/.tmuxinator/.tmux.k8s.conf
+
+windows:
+  - Dashboard:
+      layout: 9a94,106x52,0,0[106x5,0,0{53x5,0,0,1,52x5,54,0,6},106x4,0,6,5,106x41,0,11,3]
+      panes:
+        # - tmux set-option -g pane-border-fg red; \
+        # tmux set-option -g pane-active-border-fg yellow; watch -t -n5 kubectl config get-clusters
+        - watch -t -n5 kubectl config get-clusters
+        # - watch -t -n5 kubectl top nodes
+        - watch -t -n5 kubectl get deployment
+        - watch -t -n5 kubectl get pods -o wide
+        - tmux resize-pane -U 5; set -o vi; cd /home/al/Arnold/git/a12o/mydemo; clear; ls
+  - GIT:
+      # layout: main-vertical
+      panes:
+        - cd /home/al/Arnold/git/a12o/mydemo; set -o vi; clear; ll
