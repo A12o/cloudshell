@@ -1,6 +1,6 @@
 #!/bin/bash
-set -xeu
-IFS=$'\n\t'
+# set -xeu
+# IFS=$'\n\t'
 
 # install Linuxbrew, paste at a terminal prompt:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
