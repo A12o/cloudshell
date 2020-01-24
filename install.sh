@@ -1,13 +1,13 @@
 #!/bin/bash
 set -xeu
-IFS=$'\n\t'
+# IFS=$'\n\t'
 
 # install Linuxbrew, paste at a terminal prompt:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 brew update
 brew install zsh
-brew install git vim jq tig fzf
+brew install git vim jq tig fzf colorls
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git .oh-my-zsh
 git clone https://github.com/A12o/cloudshell.git .cloudshell
