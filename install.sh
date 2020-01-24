@@ -20,7 +20,7 @@ ln -s ~/.cloudshell/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/.cloudshell/profile.d ~/profile.d
 
 cat >> ~/.bashrc << BOF
-zsh
+bash -c zsh
 BOF
 
 brew install ruby
@@ -30,4 +30,3 @@ ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
 echo -e "\n Restart Cloud Shell for changes to take effect"
 
-exit
