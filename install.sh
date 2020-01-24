@@ -7,7 +7,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 brew update
 brew install zsh
-brew install git vim jq tig
+brew install git vim jq tig fzf
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git .oh-my-zsh
 git clone https://github.com/A12o/cloudshell.git
