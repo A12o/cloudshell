@@ -1,4 +1,7 @@
 #!/bin/bash
+set -xeuo pipefail
+IFS=$'\n\t'
+
 # install Linuxbrew, paste at a terminal prompt:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
@@ -19,8 +22,9 @@ cat >> ~/.bashrc << BOF
 bash -c zsh
 BOF
 
+brew install ruby
 gem install tmuxinator
 ln -s ~/cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
-exit
+echo -e "\n Restart Cloud Shell for changes to take effect"
