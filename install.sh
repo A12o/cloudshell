@@ -24,15 +24,17 @@ cat >> ~/.bashrc << BOF
 # export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 if [[ ! (-d /home/linuxbrew) ]]; then
   \echo -e "\n Please wait, copying missing linuxbrew files ..."
-  cp -pR $HOME/.linuxbrew_bkp /home/linuxbrew
+  # mkdir /home/linuxbrew
+  cp -pR $HOME/.linuxbrew_bkp/linuxbrew /home/linuxbrew
 fi
 bash -c zsh
 BOF
 
 
 rm -rf $HOME/.linuxbrew_bkp
+mkdir $HOME/.linuxbrew_bkp
 \echo -e "\n backing up linuxbrew ..."
-cp -pR /home/linuxbrew $HOME/.linuxbrew_bkp
+cp -pR /home/linuxbrew -t $HOME/.linuxbrew_bkp
 
 # brew install ruby
 gem install tmuxinator
