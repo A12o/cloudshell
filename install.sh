@@ -20,7 +20,7 @@ ln -s ~/.cloudshell/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/.cloudshell/profile.d ~/profile.d
 
 cat >> ~/.bashrc << BOF
-export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
+# export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 if [[ ! (-d /home/linuxbrew) ]]; then
   echo "Please wait, copying missing linuxbrew files ..."
   cp -pR $HOME/linuxbrew /home/linuxbrew
@@ -30,6 +30,7 @@ BOF
 
 
 rm -rf $HOME/linuxbrew
+echo "backing up linuxbrew"
 cp -pR /home/linuxbrew $HOME/
 
 # brew install ruby
