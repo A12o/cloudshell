@@ -20,6 +20,7 @@ ln -s ~/.cloudshell/profile.d ~/profile.d
 
 cat >> ~/.bashrc << BOF
 export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
+cp -pR $HOME/linuxbrew /home/linuxbrew
 bash -c zsh
 BOF
 
