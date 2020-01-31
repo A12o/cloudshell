@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 brew update
 brew install zsh
-brew install vim jq tig fzf git httpie peco colordiff diff-so-fancy
+brew install vim jq tig fzf git httpie peco colordiff diff-so-fancy terraform
 
 rm -rf ~/.gitconfig ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.oh-my-zsh ~/.cloudshell
 
