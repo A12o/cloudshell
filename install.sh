@@ -23,7 +23,7 @@ ln -s ~/.cloudshell/profile.d ~/profile.d
 cat >> ~/.bashrc << BOF
 # export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 if [[ ! (-d /home/linuxbrew) ]]; then
-  echo "Please wait, copying missing linuxbrew files ..."
+  \echo -e "\n Please wait, copying missing linuxbrew files ..."
   cp -pR $HOME/.linuxbrew_bkp /home/linuxbrew
 fi
 bash -c zsh
@@ -31,7 +31,7 @@ BOF
 
 
 rm -rf $HOME/.linuxbrew_bkp
-echo "backing up linuxbrew"
+\echo -e "\n backing up linuxbrew ..."
 cp -pR /home/linuxbrew $HOME/.linuxbrew_bkp
 
 # brew install ruby
@@ -39,5 +39,5 @@ gem install tmuxinator
 ln -s ~/.cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
-echo -e "\n Restart Cloud Shell for changes to take effect \n\t or \n source ~/.bashrc"
+\echo -e "\n Restart Cloud Shell for changes to take effect \n\t or \n source ~/.bashrc"
 
