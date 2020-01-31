@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 brew update
 brew install zsh
-brew install vim jq tig fzf git httpie
+brew install vim jq tig fzf git httpie peco
 
 rm -rf ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.ohmyzsh ~/.cloudshell
 
@@ -39,5 +39,5 @@ ln -s ~/.cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
 # echo -e "\n Restart Cloud Shell for changes to take effect"
-source ~/.bashrc
+exit && source ~/.bashrc
 
