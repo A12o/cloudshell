@@ -1,12 +1,12 @@
 ---
 
-name: Arnold
+name: AZURE
 root: ~/
 
 windows:
   - editor:
-      layout: tiled
+      layout: even-horizontal
       panes:
-        -
+        - clear
         - az interactive
 

@@ -8,9 +8,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 brew update
 brew install zsh
-brew install vim jq tig fzf git httpie peco
+brew install vim jq tig fzf git httpie peco colordiff diff-so-fancy
 
-rm -rf ~/.gitconfig ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.ohmyzsh ~/.cloudshell
+rm -rf ~/.gitconfig ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.oh-my-zsh ~/.cloudshell
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git .oh-my-zsh
 git clone https://github.com/A12o/cloudshell.git .cloudshell
@@ -39,6 +39,5 @@ gem install tmuxinator
 ln -s ~/.cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
-# echo -e "\n Restart Cloud Shell for changes to take effect"
-exit && source ~/.bashrc
+echo -e "\n Restart Cloud Shell for changes to take effect \n\t or \n source ~/.bashrc"
 
