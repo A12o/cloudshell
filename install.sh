@@ -21,11 +21,13 @@ ln -s ~/.cloudshell/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/.cloudshell/profile.d ~/profile.d
 
 cat >> ~/.bashrc << BOF
-# export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
+export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 if [[ ! (-d /home/linuxbrew) ]]; then
-  \echo -e "\n Please wait, copying missing linuxbrew files ..."
+  \echo -e "\n Please wait, copying missing linuxbrew files ...\n"
   # mkdir /home/linuxbrew
   cp -pR $HOME/.linuxbrew_bkp/linuxbrew /home/linuxbrew
+  brew list
+  brew upgrade
 fi
 bash -c zsh
 BOF
