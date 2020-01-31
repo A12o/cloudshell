@@ -24,10 +24,13 @@ CURRENT_BG='NONE'
 
 () {
   local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-  MASTER_SEPARATOR=$'\ue0c0' # fire echo $'\ue0c0' to view in terminal
+  # MASTER_SEPARATOR=$'\ue0c0' # fire echo $'\ue0c0' to view in terminal
+  MASTER_SEPARATOR=''
   # END_SEPARATOR=$'\ue0b0' #  echo $'\ue0b0' to view in terminal
-  END_SEPARATOR=$'\ue0b4' # semicircle echo $'\ue0b4' to view in terminal
-  GIT_SEPARATOR=$'\ue725' #  echo $'\ue725' to view in terminal
+  # END_SEPARATOR=$'\ue0b4' # semicircle echo $'\ue0b4' to view in terminal
+  END_SEPARATOR=''
+  # GIT_SEPARATOR=$'\ue725' #  echo $'\ue725' to view in terminal
+  GIT_SEPARATOR=''
   # LOCK_SEPARATOR=$'\ue0a2' # 
 }
 
@@ -317,3 +320,4 @@ build_prompt() {
 }
 
 PROMPT='$(build_prompt) '
+

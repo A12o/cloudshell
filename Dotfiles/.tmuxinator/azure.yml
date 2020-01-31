@@ -1,0 +1,12 @@
+---
+
+name: Arnold
+root: ~/
+
+windows:
+  - editor:
+      layout: tiled
+      panes:
+        -
+        - az interactive
+

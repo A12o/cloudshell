@@ -10,12 +10,13 @@ brew update
 brew install zsh
 brew install vim jq tig fzf git httpie peco
 
-rm -rf ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.ohmyzsh ~/.cloudshell
+rm -rf ~/.gitconfig ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.ohmyzsh ~/.cloudshell
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git .oh-my-zsh
 git clone https://github.com/A12o/cloudshell.git .cloudshell
 
 ln -s ~/.cloudshell/Dotfiles/.vimrc ~/.vimrc
+ln -s ~/.cloudshell/Dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.cloudshell/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/.cloudshell/profile.d ~/profile.d
 
