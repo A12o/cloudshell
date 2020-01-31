@@ -2,9 +2,10 @@
 # set -xeu
 # IFS=$'\n\t'
 
+export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
-export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 brew update
 brew install zsh
 brew install vim jq tig fzf git httpie
@@ -20,9 +21,13 @@ ln -s ~/.cloudshell/profile.d ~/profile.d
 
 cat >> ~/.bashrc << BOF
 export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
-cp -pR $HOME/linuxbrew /home/linuxbrew
+if [[ ! (-d /home/linuxbrew) ]]; then
+  echo "Please wait, copying missing linuxbrew files ..."
+  cp -pR $HOME/linuxbrew /home/linuxbrew
+fi
 bash -c zsh
 BOF
+
 
 rm -rf $HOME/linuxbrew
 cp -pR /home/linuxbrew $HOME/
@@ -33,5 +38,5 @@ ln -s ~/.cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
 # echo -e "\n Restart Cloud Shell for changes to take effect"
-source $HOME/.bashrc
+source ~/.bashrc
 
