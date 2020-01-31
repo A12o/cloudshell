@@ -2,31 +2,34 @@
 # set -xeu
 # IFS=$'\n\t'
 
-# install Linuxbrew, paste at a terminal prompt:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 
 export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 brew update
 brew install zsh
-brew install vim jq tig fzf
+brew install vim jq tig fzf git httpie
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git .oh-my-zsh
 git clone https://github.com/A12o/cloudshell.git .cloudshell
 
-rm -rf ~/.vimrc ~/.tmux.conf
+rm -rf ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d
 
 ln -s ~/.cloudshell/Dotfiles/.vimrc ~/.vimrc
 ln -s ~/.cloudshell/Dotfiles/.zshrc ~/.zshrc
 ln -s ~/.cloudshell/profile.d ~/profile.d
 
 cat >> ~/.bashrc << BOF
+export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 bash -c zsh
 BOF
 
-brew install ruby
+cp -pR /home/linuxbrew $HOME/
+
+# brew install ruby
 gem install tmuxinator
 ln -s ~/.cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
-echo -e "\n Restart Cloud Shell for changes to take effect"
+# echo -e "\n Restart Cloud Shell for changes to take effect"
+source ~/.bashrc
 
