@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
 brew update
 brew install zsh
-brew install git vim jq tig fzf
+brew install vim jq tig fzf
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git .oh-my-zsh
 git clone https://github.com/A12o/cloudshell.git .cloudshell
