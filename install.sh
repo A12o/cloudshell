@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # set -xeu
 # IFS=$'\n\t'
@@ -9,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 brew update
 brew install zsh
-brew install vim jq tig fzf git httpie peco colordiff diff-so-fancy terraform sipcalc hexyl
+brew install vim jq tig fzf git httpie peco colordiff diff-so-fancy terraform sipcalc hexyl tmuxinator
 
 rm -rf ~/.gitconfig ~/.vimrc ~/.tmux.conf ~/.tmuxinator ~/.zshrc ~/profile.d ~/.oh-my-zsh ~/.cloudshell
 
@@ -29,6 +29,8 @@ if [[ ! (-d /home/linuxbrew) ]]; then
   cp -pR $HOME/.linuxbrew_bkp/linuxbrew /home/linuxbrew
   brew list
   brew upgrade
+  brew cleanup
+  cp -pRu /home/linuxbrew $HOME/.linuxbrew_bkp
 fi
 bash -c zsh
 BOF
@@ -39,8 +41,6 @@ mkdir $HOME/.linuxbrew_bkp
 \echo -e "\n backing up linuxbrew ..."
 cp -pR /home/linuxbrew -t $HOME/.linuxbrew_bkp
 
-# brew install ruby
-gem install tmuxinator
 ln -s ~/.cloudshell/Dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.cloudshell/Dotfiles/.tmuxinator ~/.tmuxinator
 
