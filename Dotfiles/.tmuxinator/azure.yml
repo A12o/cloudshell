@@ -7,6 +7,6 @@ windows:
   - editor:
       layout: even-horizontal
       panes:
-        - clear
+        - clear && head -n 43 ~/.tmux.conf
         - az interactive
 
