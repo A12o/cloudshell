@@ -1,3 +1,4 @@
+
 ---
 
 name: AZURE
@@ -7,6 +8,6 @@ windows:
   - editor:
       layout: even-horizontal
       panes:
-        - clear && head -n 43 ~/.tmux.conf
+        - clear && head -n 43 ~/.tmux.conf && read -s && clear
         - az interactive
 
